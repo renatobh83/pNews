@@ -1,4 +1,3 @@
-"use client";
 export function DataNews( { data }: { data: [{jornal: string, noticia:string}] }) {
   return (
     <>
