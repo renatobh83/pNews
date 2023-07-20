@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import {DataNews } from "../components/DataNews"
 
 import Loading from "./loading"
-
+export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 async function getData() {
   const res = await fetch('https://puppeteer-title.onrender.com/news', { cache: 'no-store' })
   if (!res.ok) {
