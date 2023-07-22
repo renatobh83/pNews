@@ -1,4 +1,4 @@
-(import { Suspense } from 'react'
+
 import { DataNews } from "../components/DataNews"
 export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 async function getData() {
