@@ -5,7 +5,7 @@ const fetcher = url => fetch(url, { cache: 'no-store' }).then(r => r.json())
 export const runtime = 'edge' 
 
 export async function DataNews() {
-    const { data, error, isLoading } = useSWR('/noticias', fetcher, { refreshInterval: 40000, refreshWhenHidden: true })
+    const { data, error, isLoading } = useSWR('https://node-news.vercel.app/news', fetcher, { refreshInterval: 40000, refreshWhenHidden: true })
 
 
   if(isLoading) {
