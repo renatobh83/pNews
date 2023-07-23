@@ -1,7 +1,7 @@
 "use client"
 import useSWR from 'swr'
 
-const fetcher = url => fetch(url, { method: POST }).then(r => r.json())
+const fetcher = url => fetch(url, { method: "POST" }).then(r => r.json())
 export const runtime = 'edge' 
 
 export async function DataNews() {
