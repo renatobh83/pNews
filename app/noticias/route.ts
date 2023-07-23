@@ -5,7 +5,7 @@ const chromium = require("@sparticuz/chromium-min");
 const urls = ['https://valor.globo.com/ultimas-noticias/',
               'https://www1.folha.uol.com.br/ultimas-noticias/',
               'https://www.estadao.com.br/ultimas/'];
-export async function GET(request: Request) {
+export async function POST(request: Request) {
 let noticias = []
   const browser = await puppeteer.launch({
        args:[ "--disable-setuid-sandbox",
@@ -68,7 +68,7 @@ let noticias = []
     }
       }
 
-  return NextResponse.json(new Date().toISOString())
+  return NextResponse.json(noticias)
   } catch (e) {
     return NextResponse.json(`Something went wrong while running Puppeteer: ${e}`)
    
