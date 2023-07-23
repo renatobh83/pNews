@@ -1,13 +1,27 @@
-export function DataNews( { data }: { data: [{jornal: string, noticia:string}] }) {
+"use client"
+import useSWR from 'swr'
+
+const fetcher = url => fetch(url, { cache: 'no-store' }).then(r => r.json())
+export const runtime = 'edge' 
+
+export async function DataNews() {
+    const { data, error, isLoading } = useSWR('https://node-news.vercel.app/news', fetcher, { refreshInterval: 40000, refreshWhenHidden: true })
+
+
+  if(isLoading) {
+    return <p>Loading...</p>
+  }
+
   return (
     <>
-    <div className="md:flex grid gap-2 flex-wrap justify-center mt-2">  
+    <div >  
+          {/*<div className="flex justify-between"><Reload /></div>*/}
     {data?.map(valor  => (
-          <div key={valor.noticia} className="max-w-sm px-2 sm:py-6 py-2 basis-30 grow
-                          bg-white border border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <div className="flex items-center space-x-4">
-                <p className="text-lg tracking-wide font-medium text-gray-900 dark:text-white"><span className="uppercase text-gray-900 dark:text-white">
-                  {valor.jornal}</span> - {valor.noticia}</p>
+          <div key={valor.noticia} className="p-2">
+              <div>
+                <p>
+                <span>{valor.jornal}</span>  : {valor.noticia}
+                  </p>
               </div>
             </div>
       ) as any)
