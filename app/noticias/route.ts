@@ -68,7 +68,7 @@ let noticias = []
     }
       }
 
-  return NextResponse.json(noticias)
+  return NextResponse.json(new Date().toISOString())
   } catch (e) {
     return NextResponse.json(`Something went wrong while running Puppeteer: ${e}`)
    
