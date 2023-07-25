@@ -11,12 +11,12 @@ export async function DataNews({params}) {
 const { data, error, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_BASE_URL}/news?url=${params}`, fetcher, { refreshInterval: 40000, refreshWhenHidden: true })
   return (
     <>
-    <div >  
+    <div className="py-2 ">  
     {data?.map(valor  => (
-          <div key={valor.noticia} className="p-2">
+          <div key={valor.noticia} className="p-1">
               <div>
-                <p>
-                <span>{valor.jornal}</span>  : {valor.noticia}
+                <p className="tracking-wide">
+                <span className="text-gray-500 font-bold">{valor.jornal}</span>  : {valor.noticia}
                   </p>
               </div>
             </div>
