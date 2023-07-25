@@ -4,7 +4,7 @@ const links = ["https://valor.globo.com/ultimas-noticias/&classe=h2.feed-post-li
 "https://br.investing.com/news/&classe=div.largeTitle>article>.textDiv>a&jornal=Investig",
 "https://economia.uol.com.br/ultimas/&classe=h3.thumb-title>article>.textDiv>a&jornal=Uol",
 "https://www.bomdiamercado.com.br/noticias/&classe=h4.title&jornal=BDM",
-"http://broadcast.com.br/cadernos/financeiro/&classe=.materia&jornal=Broadcast"]
+"http://broadcast.com.br/cadernos/financeiro/&classe=.materia>h3>a&jornal=Broadcast"]
 export const Jornal = () => {
 	return links
 }
