@@ -1,8 +1,10 @@
-const links = ["https://valor.globo.com/ultimas-noticias/&classe=feed-post-link gui-color-primary&jornal=Valor",
-                "https://www1.folha.uol.com.br/ultimas-noticias/&classe=c-headline__title&jornal=Folha de Sp",
-	      "https://economia.uol.com.br/ultimas/&classe=thumb-title title-xsmall title-lg-small&jornal=UOL",
-	      "https://www.estadao.com.br/ultimas/&classe=headline&jornal=Estadao",
-	      "https://www.bomdiamercado.com.br/noticias/&classe=title&jornal=BDM&n=10"]
+const links = ["https://valor.globo.com/ultimas-noticias/&classe=h2.feed-post-link&jornal=Valor",
+"https://www1.folha.uol.com.br/ultimas-noticias/&classe=h2.c-headline__title&jornal=Folha de Sp",
+"https://www.estadao.com.br/ultimas/&classe=h3.headline&jornal=Estadao",
+"https://br.investing.com/news/&classe=div.largeTitle>article>.textDiv>a&jornal=Investig",
+"https://economia.uol.com.br/ultimas/&classe=h3.thumb-title>article>.textDiv>a&jornal=Uol",
+"https://www.bomdiamercado.com.br/noticias/&classe=h4.title&jornal=BDM",
+"http://broadcast.com.br/cadernos/financeiro/&classe=.materia&jornal=Broadcast+"]
 export const Jornal = () => {
 	return links
 }
