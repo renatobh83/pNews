@@ -8,7 +8,7 @@ export const runtime = 'edge'
 
 export async function DataNews({params}) {
 
-const { data, error, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_BASE_URL}/news?url=${params}`, fetcher, { refreshInterval: 40000, refreshWhenHidden: true })
+const { data, error, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_BASE_URL}/news?url=${params}`, fetcher, { refreshInterval: 30000, refreshWhenHidden: true })
   return (
     <>
     <div className="py-2 ">  
