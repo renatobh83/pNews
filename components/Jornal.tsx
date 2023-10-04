@@ -1,6 +1,6 @@
 const links = [
 "https://valor.globo.com/ultimas-noticias/&classe=h2.feed-post-link&jornal=Valor",
-"https://www1.folha.uol.com.br/ultimas-noticias/&classe=h2.c-headline__title&jornal=Folha de Sp",
+"https://www1.folha.uol.com.br/ultimas-noticias/&classe=h2.c-headline__title&jornal=Folha de Sp&n=6",
 "https://www.estadao.com.br/ultimas/&classe=h3.headline&jornal=Estadao",
 "https://br.investing.com/news/economic-indicators&classe=div.largeTitle>article>div.textDiv>a&jornal=investing",
 "https://economia.uol.com.br/ultimas/&classe=h3.thumb-title>article>.textDiv>a&jornal=Uol",
